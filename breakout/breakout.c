@@ -45,7 +45,19 @@ void init_field()
         }
 }
 
-void 
+void init()
+{
+	player_loc.x = 5;
+	player_loc.y = Height-1;
+
+	ball_loc.x = Width/2;
+	ball_loc.y = Height/2;
+
+	ball_vel.x = 0;
+	ball_vel.y = -1;
+
+	init_field();
+}	
 
 void render_screen()
 {
@@ -61,7 +73,7 @@ void render_screen()
 
 int main()
 {
-        init_field();
+        init();
 	render_screen();
         return 0;
 }
